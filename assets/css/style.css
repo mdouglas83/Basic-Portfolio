@@ -13,6 +13,11 @@ body {
 }
 
 header {
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	background-color: #ffffff;
 	border-bottom: #cccccc 2px solid;
 	text-align: center;
@@ -20,6 +25,10 @@ header {
 }
 
 footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	color: #bbbbbb;
 	background-color: #666666;
 	border-top: #4aaaa5 8px solid;
@@ -60,6 +69,14 @@ a {
 	text-decoration:none;
 }
 
+a:hover {
+	color: #4aaaa5;
+}
+
+a:active {
+	color: #4aaaa5;
+}
+
 #header-wrap {
 	width: 960px;
 	margin: auto;
@@ -70,15 +87,15 @@ a {
 #content-wrap {
 	width: 960px;
 	margin: auto;
-	padding: 20px 0px 20px 0px;
+	padding: 90px 0px 90px 0px;
 	overflow: auto;
 	clear: both;
 }
 
 .top-name {
 	float: left;
-	width: 250px;
-	/*padding: 20px 0px 20px 0px;*/
+	/*width: 250px;*/
+	padding: 0px 30px 0px 30px;
 	background-color: #4aaaa5;
 	/*text-align: center;*/
 
@@ -86,7 +103,7 @@ a {
 
 .top-link {
 	float: right;
-	width: 300px;
+	/*width: 300px;*/
 	margin: 0 auto;
 	padding: 30px 0px 30px 0px;
 	text-align: center;
@@ -94,7 +111,8 @@ a {
 
 .top-link-left {
 	float: left;
-	width: 100px;
+	/*width: 100px;*/
+	padding: 0px 20px 0px 20px;
 	margin: 0 auto;
 	border-right: #dddddd 1px solid;
 	color: #cccccc;
@@ -103,7 +121,8 @@ a {
 
 .top-link-right {
 	float: left;
-	width: 100px;
+	/*width: 100px;*/
+	padding: 0px 0px 0px 20px;
 	margin: 0 auto;
 	color: #cccccc;
 	font-size: 18px;
@@ -158,6 +177,85 @@ a {
 .bio-text {
 	margin: 0px 0px 20px 0px;
 	line-height: 1.25;
+}
+
+#portfolio-container {
+	margin: auto;
+	overflow: auto;
+	clear: both;
+}
+
+.portfolio-row {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	margin: 30px 0px 30px 0px;
+}
+
+.portfolio-row-bottom {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	margin: 30px 0px 0px 0px;
+}
+
+.portfolio-image-left {
+	float: left;
+}
+
+.portfolio-image-right {
+	float: right;
+}
+
+.portfolio-image-banner {
+	position: absolute;
+	bottom: 10px;
+	height: 60px;
+	width: 275px;
+	background-color: #4aaaa5;
+	opacity: 0.75;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	padding: 20px;
+}
+
+.contact-label {
+	width: 100%;
+	/*margin: 10px;*/
+	font-size: 16px;
+	color: #999999;
+	/*margin: 0px 0px 5px 0px;*/
+}
+
+.contact-text {
+	width: 100%;
+	padding: 5px;
+	font-size: 14px;
+	color: #a9a9a9;
+	margin: 5px 0px 20px 0px;
+	border: #dddddd 1px solid;
+}
+
+.contact-memo {
+	width: 100%;
+	height: 200px;
+	padding: 5px;
+	font-size: 14px;
+	color: #a9a9a9;
+	margin: 5px 0px 20px 0px;
+	border: #dddddd 1px solid;
+}
+
+.contact-button {
+	width: 125px;
+	padding: 10px;
+	background-color: #4aaaa5;
+	color: #ffffff;
+	font-size: 16px;
+	text-align: center;
+	border: none;
 }
 
 .hr1 {
