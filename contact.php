@@ -38,18 +38,18 @@
 <style>
 	body {
 		margin: 20px;
-		padding: 20px;
 		background-color: #ffffff;
-		font-size: 16px;
+		font-size: 14px;
 		color: #777777;
 		font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+		line-height: 1.25;
 	}
 	h1 {
 		color: #4aaaa5;
 		font-size: 28px;
 		font-weight: bold;
 		margin: 0 auto;
-		padding: 25px 0px 25px 0px;
+		padding: 0px 0px 25px 0px;
 		font-family: 'Georgia', Times, Times New Roman, serif;
 	}
 	a {
@@ -57,7 +57,8 @@
 		color: #aaaaaa;
 		font-size: 16px;
 		font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-		text-decoration:none;
+		font-weight: bold;
+		text-decoration: none;
 	}
 	a:hover {
 		color: #4aaaa5;
@@ -68,9 +69,10 @@
 	.msg {
 		margin: 0px 0px 20px 10px;
 		background-color: #ffffff;
-		font-size: 12px;
+		font-size: 14px;
 		color: #997788;
 		font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+		line-height: 1.5;
 	}
 </style>
 </head>
@@ -81,7 +83,7 @@
 		echo('<div class="msg">');
 		echo("<strong>Name:</strong> $name <br>\r\n");
 		echo("<strong>Email:</strong> $email_address<br>\r\n");
-		echo("<strong>Message:</strong> $message<br>\r\n<br>\r\n");
+		echo("<strong>Message:</strong> $message<br>\r\n");
 		echo('</div>');
 	} else {
 		echo nl2br($errors);
