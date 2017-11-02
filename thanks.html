@@ -9,6 +9,7 @@
 	      	function sendmail(form) {
 	      		var url = window.location.href;
 	      		url = url.slice(0, url.lastIndexOf('/')) + '/thanks.html';
+	      		alert(url);
 	        	form.redirect.value = url;
 	        	form.submit();
 	        };
