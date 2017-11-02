@@ -20,7 +20,9 @@
 		$headers .= 'From: Matt Douglas <md@ivytech.co>' . "\r\n"; 
 		//$headers .= "Reply-To: $email_address";
 		mail('mrdouglas83@gmail.com',$email_subject,$email_body,$headers);
-		header("Location: $redirect");
+		//if (!substr($redirect, 0, 4) == 'file') {
+		//	header("Location: $redirect");
+		//}
 	} 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
@@ -37,7 +39,7 @@
 <body>
 <?php
 	if(empty($errors)) {
-		echo('<strong>Thanks for your message!</strong>');
+		echo('<strong>Thanks for your message!</strong><br><br><a href="' . $redirect .'">Back to site</a>');
 	} else {
 		echo nl2br($errors);
 	}
