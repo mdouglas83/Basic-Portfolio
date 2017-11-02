@@ -15,7 +15,7 @@
 		$email_body = "<strong>New contact received!</strong><br><br>\r\n\r\n".
 						"Name: $name <br>\r\n".
 						"Email: $email_address<br>\r\n".
-						"Message: $message\r\n";
+						"Message: $message";
 		$headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 		$headers .= 'From: Matt Douglas <md@ivytech.co>' . "\r\n"; 
 		//$headers .= "Reply-To: $email_address";
@@ -35,14 +35,59 @@
 		echo('<title>Error!</title>');
 	}
 ?>
+<style>
+	body {
+		margin: 20px;
+		padding: 20px;
+		background-color: #ffffff;
+		font-size: 16px;
+		color: #777777;
+		font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	}
+	h1 {
+		color: #4aaaa5;
+		font-size: 28px;
+		font-weight: bold;
+		margin: 0 auto;
+		padding: 25px 0px 25px 0px;
+		font-family: 'Georgia', Times, Times New Roman, serif;
+	}
+	a {
+		border: none;
+		color: #aaaaaa;
+		font-size: 16px;
+		font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+		text-decoration:none;
+	}
+	a:hover {
+		color: #4aaaa5;
+	}
+	a:active {
+		color: #4aaaa5;
+	}
+	.msg {
+		margin: 0px 0px 20px 10px;
+		background-color: #ffffff;
+		font-size: 12px;
+		color: #997788;
+		font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	}
+</style>
 </head>
 <body>
 <?php
 	if(empty($errors)) {
-		echo('<strong>Thanks for your message!</strong><br><br><a href="' . $redirect .'">Back to site</a>');
+		echo('<h1>Thanks for your message!</h1>');
+		echo('<div class="msg">');
+		echo("<strong>Name:</strong> $name <br>\r\n");
+		echo("<strong>Email:</strong> $email_address<br>\r\n");
+		echo("<strong>Message:</strong> $message<br>\r\n<br>\r\n");
+		echo('</div>');
 	} else {
 		echo nl2br($errors);
+		echo("<br>\r\n<br>\r\n");
 	}
+	echo('<a href="' . $redirect .'">Back to site</a>');
 ?>
 </body>
 </html>
