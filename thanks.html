@@ -2,18 +2,9 @@
 <html lang="en-us">
 	<head>
 		<meta charset="UTF-8">
-		<title>Matt Douglas - Contact</title>
+		<title>Matt Douglas - Thanks!</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<script>
-	      	function sendmail(form) {
-	      		var url = window.location.href;
-	      		url = url.slice(0, url.lastIndexOf('/')) + '/thanks.html';
-	      		alert(url);
-	        	form.redirect.value = url;
-	        	form.submit();
-	        };
-		</script>
 	</head>
 	<body>
 		<header>
@@ -36,28 +27,9 @@
 		</header>
 		<div id="content-wrap">
 			<section id="main-contact">
-				<h2>Contact</h2>
+				<h2>Thank You!</h2>
 				<hr class="hr1">
-				<form method="POST" name="contactform" action="http://www.ivytech.co/md/contact.php">
-					<input name="redirect" type="hidden" value="">
-					<p>
-						<label class="contact-label">Name</label>
-						<input class="contact-text" type="text" name="name" value="John Doe" onfocus="if (this.value=='John Doe') this.value='';">
-					</p>
-					<p>
-						<label class="contact-label">Email</label>
-						<input class="contact-text" type="text" name="email" value="example@gmail.com" onfocus="if (this.value=='example@gmail.com') this.value='';">
-					</p>
-					<p>
-						<label class="contact-label">Message</label>
-						<textarea class="contact-memo" type="text" name="message"></textarea>
-					</p>
-					<p>
-						<!--<input class="contact-button" type="submit" value="Submit">-->
-						<input class="contact-button" type="button" value="Submit" onclick="sendmail(this.form)">
-						<input class="contact-button" type="reset" value="Reset">
-					</p>
-				</form>
+				Your contact info has been sent.
 			</section>
 			<section id="contact-info">
 				<h3>Connect with Me</h3>
